@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "author": "Кир Костин",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -37.8, "left": -298.2, "attrs": {} },
+    {"id": "serial","type": "wokwi-serial-port","attrs": {"baud": "9600"}},
+    { "type": "wokwi-servo", "id": "servo1", "top": -21.2, "left": 38.4, "attrs": {} }
+  ],
+  "connections": [
+    ["uno:1","serial:RX","",[]],    
+    ["uno:0","serial:TX","",[]],
+    [ "servo1:GND", "uno:GND.2", "black", [ "h-48", "v144", "h-115.2" ] ],
+    [ "uno:5V", "servo1:V+", "red", [ "v28.7", "h138.2", "v-144" ] ],
+    [ "servo1:PWM", "uno:9", "green", [ "h-19.2", "v-105.4", "h-153.6" ] ]
+  ],
+  "dependencies": {}
+}
